@@ -227,15 +227,7 @@ All screenshots documenting the issue have been embedded throughout this report.
 ## Proposed Solution
 
 1. Audit all static content in the application and replace with translation keys
-2. Implement proper change detection when language is switched:
-   ```javascript
-   // Pseudo-code
-   onLanguageChange(newLang) {
-     loadTranslations(newLang);
-     reRenderAllComponents();
-     updateDynamicContent();
-   }
-   ```
+2. Implement proper change detection when language is switched to ensure all components re-render with new translations
 3. Add comprehensive translation tests
 4. Update API endpoints to return translated content based on current language
 5. Implement a fallback mechanism to English if translation is missing
